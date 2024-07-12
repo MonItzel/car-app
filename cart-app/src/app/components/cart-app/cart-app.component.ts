@@ -22,4 +22,7 @@ export class CartAppComponent implements OnInit{
     this.products = this.service.findAll();
     //throw new Error('Method not implemented.');
   }
+  onAddCart(product: Product){
+    this.items = [... this.items, {product: {... product}, quantity:1}]
+  }
 }
