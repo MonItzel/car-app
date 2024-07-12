@@ -1,3 +1,8 @@
-<h2>Carrito de compras</h2>
-
+<h2>Catálogo de productos</h2>
 <catalog [products]="products" />
+
+@if(items.length > 0){
+    <cart [items]="items" />
+}@else{
+    <div class="alert alert-warning">No hay elemetos en el carrito</div>
+}
